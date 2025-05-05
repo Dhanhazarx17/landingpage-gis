@@ -1,0 +1,291 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: #f9fafb;
+  color: #111827;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Navbar */
+.navbar {
+  background: #ffffffcc;
+  backdrop-filter: blur(10px);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #16a34a;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 500;
+  transition: all 0.3s;
+  position: relative;
+}
+
+nav a:hover {
+  color: #16a34a;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: url('images/map-medan.png') center/cover no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.2),
+    rgba(240, 255, 240, 0.6)
+  );
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #374151;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #16a34a, #059669);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(22, 163, 74, 0.5);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #059669, #16a34a);
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(22, 163, 74, 0.7);
+}
+
+.hero-img {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section */
+.about {
+  background: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+/* Sekolah Unggulan */
+.schools {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f3f4f6;
+}
+
+.schools h2 {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.school-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 320px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.school-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.school-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+  text-align: left;
+}
+
+.card-body h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.card-body p {
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+/* Tim Kami */
+.team {
+  background: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.team-desc {
+  font-size: 1.1rem;
+  color: #6b7280;
+  margin-bottom: 50px;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.team-member {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 20px;
+  width: 220px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.team-member:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 3px solid #16a34a;
+}
+
+.team-member h3 {
+  margin: 10px 0 4px;
+  font-size: 1.2rem;
+  color: #111827;
+}
+
+.team-member .nim {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.team-member .jabatan {
+  font-size: 0.85rem;
+  color: #16a34a;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  background: #111827;
+  color: #f9fafb;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 40px;
+}
